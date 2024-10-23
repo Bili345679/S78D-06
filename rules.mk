@@ -1,0 +1,39 @@
+MCU = STM32F103
+# BOOTLOADER = stm32-dfu
+BOOTLOADER = stm32duino
+
+# # 压缩
+LTO_ENABLE = yes
+
+# # 停用不需要的功能，压缩
+# CONSOLE_ENABLE = no
+# COMMAND_ENABLE = no
+# MOUSEKEY_ENABLE = no
+
+# LEADER_ENABLE = no
+# FAUXCLICKY_ENABLE = no
+# MIDI_ENABLE = no
+# BLUETOOTH_ENABLE = no
+# KEY_LOCK_ENABLE = no
+# TERMINAL_ENABLE = no
+
+# 压缩 参考https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
+BOOTMAGIC_ENABLE = no
+CONSOLE_ENABLE = no
+SLEEP_LED_ENABLE = no
+BACKLIGHT_ENABLE = no
+RGBLIGHT_ENABLE = no
+MOUSEKEY_ENABLE	= no
+EXTRAKEY_ENABLE	= no
+MIDI_ENABLE = no
+UNICODE_ENABLE = no
+BLUETOOTH_ENABLE = no
+AUDIO_ENABLE = no
+FAUXCLICKY_ENABLE = no
+HD44780_ENABLE = no
+EXTRAFLAGS += -flto
+
+# 全键无冲
+# NKRO_ENABLE = yes
+
+VIA_ENABLE = yes
